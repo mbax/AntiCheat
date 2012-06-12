@@ -175,15 +175,15 @@ public class PlayerListener extends EventListener
             Distance distance = new Distance(player.getLocation(), event.getClickedBlock().getLocation());
             backend.checkLongReachBlock(player, distance.getXDifference(), distance.getYDifference(), distance.getZDifference());
         }
-        
+
         /* Interactions Check */
-        
-        Block block = event.getClickedBlock(); 
-        if(block != null) 
+
+        Block block = event.getClickedBlock();
+        if (block != null)
         {
-            if(checkManager.willCheck(player, CheckType.VISUAL) && Utilities.isInteractable(block.getType())) 
+            if (checkManager.willCheck(player, CheckType.VISUAL) && Utilities.isInteractable(block.getType()))
             {
-                if(backend.checkInteraction(player, block)) 
+                if (backend.checkInteraction(player, block))
                 {
                     event.setCancelled(true);
                     log("tried to interact with an object that they couldn't see", player, CheckType.VISUAL); //boring description though.

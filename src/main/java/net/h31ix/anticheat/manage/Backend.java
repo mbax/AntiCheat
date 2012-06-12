@@ -271,25 +271,25 @@ public class Backend
             return false;
         }
     }
-    
-    public boolean checkInteraction(Player player, Block block) 
-    {
-    	int strikes = 0;
-    	
-    	// First Line of Defense
-    	Block imple = player.getTargetBlock(null, 5);
-    	if(imple.getTypeId() != block.getTypeId()) 
-    	{
-            strikes++;
-    	}
-    	
-    	// Second line of defense.
-    	if(!imple.getLocation().equals(block.getLocation()))
-    	{
-            strikes++;
-    	}
 
-    	return strikes > 0;
+    public boolean checkInteraction(Player player, Block block)
+    {
+        int strikes = 0;
+
+        // First Line of Defense
+        Block imple = player.getTargetBlock(null, 5);
+        if (imple.getTypeId() != block.getTypeId())
+        {
+            strikes++;
+        }
+
+        // Second line of defense.
+        if (!imple.getLocation().equals(block.getLocation()))
+        {
+            strikes++;
+        }
+
+        return strikes > 0;
     }
 
     public boolean checkWaterWalk(Player player, double x, double z)

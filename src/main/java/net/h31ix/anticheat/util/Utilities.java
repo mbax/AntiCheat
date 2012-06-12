@@ -84,10 +84,10 @@ public final class Utilities
     {
         return FOOD.contains(m);
     }
-    
-    public static boolean isInteractable(Material m) 
+
+    public static boolean isInteractable(Material m)
     {
-    	return INTERACTABLE.contains(m);
+        return INTERACTABLE.contains(m);
     }
 
     public static boolean sprintFly(Player player)
